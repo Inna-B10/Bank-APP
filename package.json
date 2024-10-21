@@ -13,7 +13,14 @@
 		"preview": "vite preview"
 	},
 	"devDependencies": {
+		"@trivago/prettier-plugin-sort-imports": "^4.3.0",
 		"gh-pages": "^6.2.0",
+		"prettier": "^3.3.3",
 		"vite": "^5.4.8"
+	},
+	"dependencies": {
+		"dotenv": "^16.4.5",
+		"eslint": "^9.13.0",
+		"sass": "^1.80.3"
 	}
 }
