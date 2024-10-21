@@ -1,0 +1,12 @@
+node_modules
+dist
+out
+build
+.vscode-test
+.gitignore
+.prettierrc
+.env
+
+package.json
+package-lock.json
+README.md
