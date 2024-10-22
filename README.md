@@ -16,6 +16,8 @@ npm install sass
 
 npm i eslint
 
+npm install -D @types/node      /* for support aliasing paths */
+
 ```
 
 ### TO DO
