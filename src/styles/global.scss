@@ -1,15 +1,16 @@
-@import './variables';
-@import './reset';
+@use './variables';
+@use './reset';
+@use './keyframes';
 
 input,
 button,
 body {
-	font-family: $font;
+	font-family: variables.$font;
 }
 
 body {
 	background-color: #1b1d1f;
-	color: $white;
+	color: variables.$white;
 	font-size: 17px;
 	line-height: 1.6;
 }
@@ -17,23 +18,21 @@ body {
 input {
 	font-size: 16px;
 	background-color: transparent;
-	color: $white;
+	color: variables.$white;
 
 	&::placeholder {
-		color: $text-gray;
+		color: variables.$text-gray;
 	}
 }
 
 a {
-	color: $white;
+	color: variables.$white;
 	text-decoration: none;
 	transition: border-color 0.3s ease-in-out;
 	border-bottom: 1px solid transparent;
 	animation: drawing 0.4s;
 
 	&:hover {
-		border-color: $primary;
+		border-color: variables.$primary;
 	}
 }
-
-@import './keyframes';

@@ -18,7 +18,6 @@ export class Router {
 	}
 	#handleRouteChange() {
 		const path = this.getCurrentPath()
-		console.log(path)
 
 		let route = this.#routes.find(route => route.path === path)
 
