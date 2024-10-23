@@ -1,14 +1,32 @@
+import { Layout } from '@/components/layout/layout.component'
 import { NotFound } from '@/components/screens/not-found/not-found.component'
 import { ROUTES } from './routes.data'
 
 export class Router {
 	#routes
 	#currentRoute
+	#layout = null
 
 	constructor() {
 		this.#routes = ROUTES
 		this.#currentRoute = null
 		this.#handleRouteChange()
+		this.#handleLinks()
+		//buttons back, forward
+		window.addEventListener('popstate', () => {
+			this.#handleRouteChange()
+		})
+	}
+
+	#handleLinks() {
+		document.addEventListener('click', event => {
+			const target = event.target.closest('a')
+
+			if (target) {
+				event.preventDefault()
+				this.navigate(target.href)
+			}
+		})
 	}
 
 	getCurrentPath() {
@@ -16,6 +34,14 @@ export class Router {
 		const pathname = window.location.pathname // Текущий путь в браузере
 		return pathname.replace(base, '/') || '/' // Убираем базовый путь
 	}
+
+	navigate(path) {
+		if (path !== this.getCurrentPath()) {
+			window.history.pushState({}, '', path)
+			this.#handleRouteChange()
+		}
+	}
+
 	#handleRouteChange() {
 		const path = this.getCurrentPath()
 
@@ -27,10 +53,19 @@ export class Router {
 			}
 		}
 		this.#currentRoute = route
-		this.render()
+		this.#render()
 	}
-	render() {
+	#render() {
 		const component = new this.#currentRoute.component()
-		document.getElementById('app').innerHTML = component.render()
+
+		if (!this.#layout) {
+			this.#layout = new Layout({
+				router: this,
+				children: component.render()
+			})
+			document.getElementById('app').innerHTML = this.#layout.render()
+		} else {
+			document.querySelector('main').innerHTML = component.render()
+		}
 	}
 }
