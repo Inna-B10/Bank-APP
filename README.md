@@ -18,9 +18,17 @@ npm i eslint
 
 npm install -D @types/node      /* for support aliasing paths */
 
+npm install vite-plugin-string    /* for import html files */
+
 ```
 
 ### TO DO
 - [x] routing
-- [ ] Layout, class BaseScreen
-- [ ] links
+- [x] Layout, links
+- [x] class BaseScreen, page's title
+- [x] RenderService:
+  - [x] method htmlToElement
+  - [x] method replaceComponentTags
+  - [x] method applyModuleStyles
+- [ ]  lib rQuery
+  - [ ]  method find
