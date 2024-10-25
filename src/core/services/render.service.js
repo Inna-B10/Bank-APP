@@ -12,13 +12,15 @@ class RenderService {
 		const template = document.createElement('template')
 		template.innerHTML = html.trim()
 		const element = template.content.firstChild
-		console.log(element)
 
-		//styles
+		if (styles) {
+			this.#applyModuleStyles(styles, element)
+		}
 
 		this.#replaceComponentTags(element, components)
 		return element
 	}
+
 	/**
 	 * @param {HTMLElement} parentElement
 	 * @param {Array} components
@@ -55,6 +57,26 @@ class RenderService {
 		}
 	}
 
-	//#applyModuleStyles
+	/**
+	 * @param {Object} moduleStyles
+	 * @param {string} element
+	 * @returns {void}
+	 */
+	#applyModuleStyles(moduleStyles, element) {
+		if (!element) return
+		const applyStyles = element => {
+			for (const [key, value] of Object.entries(moduleStyles)) {
+				if (element.classList.contains(key)) {
+					element.classList.remove(key)
+					element.classList.add(value)
+				}
+			}
+		}
+		if (element.getAttribute('class')) {
+			applyStyles(element)
+		}
+		const elements = element.querySelectorAll('*')
+		elements.forEach(applyStyles)
+	}
 }
 export default new RenderService()
