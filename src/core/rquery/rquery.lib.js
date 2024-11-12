@@ -22,6 +22,7 @@ class RQuery {
 			throw new Error('Invalid selector type')
 		}
 	}
+
 	/**
 	 * Find the first element that matches the specified selector within the selected element.
 	 * @param {string} selector - A CSS selector string to search for within the selected element.
@@ -55,7 +56,29 @@ class RQuery {
 		if (!(newElement instanceof HTMLElement)) {
 			throw new Error('Element must be a HTMLElement')
 		}
+		const parentElement = this.element.parentElement
+		if (parentElement) {
+			parentElement.insertBefore(newElement, this.element)
+			return this
+		} else {
+			throw new Error('Element does not have a parent element')
+		}
 	}
+
+	/**
+	 * Get or set the inner HTML of the selected element.
+	 * @param {string} [htmlContent] - OptionalHTML content to set. Id not provided,the current inner HTML will be returned.
+	 * @returns {RQuery|string} The current RQuery instance for chaining when setting HTML content, or the current inner HTML when getting.
+	 */
+	html(htmlContent) {
+		if (typeof htmlContent === 'undefined') {
+			return this.element.innerHTML
+		} else {
+			this.element.innerHTML = htmlContent
+			return this
+		}
+	}
+
 	/**
 	 * Set the CSS style of the selected element.
 	 * @param {string} property - The CSS property to set.

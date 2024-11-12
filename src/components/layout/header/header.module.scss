@@ -1,0 +1,11 @@
+@use '@/styles/mixins' as m;
+
+.header {
+  @include m.flex-horizontal-center;
+  justify-content: space-between;
+
+  .right-side {
+    @include m.flex-horizontal-center;
+    gap: 20px;
+  }
+}
