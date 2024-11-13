@@ -31,16 +31,16 @@ npm install vite-plugin-string    /* converts html files(templates) to modules *
   - [x] method replaceComponentTags
   - [x] method applyModuleStyles
 - [ ]  lib rQuery and methods
-  - [x] find
-  - [x] append
-  - [x] before
-  - [x] html
-  - [x] click
-  - [x] css
-  - [x] addClass
-  - [x] removeClass
+  - [x] find, append, before
+  - [x] html, text, click
+  - [x] css, addClass, removeClass, attr
+  - [x] inputs
 - [x]  Change layout and router using RQuery
 - [ ]  Site Header
 - [ ]  UI components:
   - [x]   Button
+  - [x]   Field
+  - [x]   Heading
+  - [x]   Loading
+  - [x]   user-item
 
