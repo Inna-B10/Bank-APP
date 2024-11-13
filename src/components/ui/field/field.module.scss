@@ -1,0 +1,16 @@
+@use '@/styles/variables';
+@use '@/styles/mixins' as m;
+
+.field {
+	@include m.transition(border-color);
+	background-color: variables.$gray;
+	border-radius: variables.$radius;
+	border: 1px solid transparent;
+	padding: 12px 20px;
+	margin-bottom: 1.3rem;
+	display: block;
+
+	&:focus-within {
+		border-color: rgba(variables.$primary, 0.5);
+	}
+}
