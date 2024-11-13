@@ -18,7 +18,7 @@ npm i eslint
 
 npm install -D @types/node      /* for support aliasing paths */
 
-npm install vite-plugin-string    /* for import html files */
+npm install vite-plugin-string    /* converts html files(templates) to modules */
 
 ```
 
@@ -30,5 +30,17 @@ npm install vite-plugin-string    /* for import html files */
   - [x] method htmlToElement
   - [x] method replaceComponentTags
   - [x] method applyModuleStyles
-- [ ]  lib rQuery
-  - [ ]  method find
+- [ ]  lib rQuery and methods
+  - [x] find
+  - [x] append
+  - [x] before
+  - [x] html
+  - [x] click
+  - [x] css
+  - [x] addClass
+  - [x] removeClass
+- [x]  Change layout and router using RQuery
+- [ ]  Site Header
+- [ ]  UI components:
+  - [x]   Button
+
