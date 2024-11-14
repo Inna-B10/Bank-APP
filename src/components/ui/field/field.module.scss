@@ -3,7 +3,7 @@
 
 .field {
 	@include m.transition(border-color);
-	background-color: variables.$gray;
+	background-color: variables.$grey;
 	border-radius: variables.$radius;
 	border: 1px solid transparent;
 	padding: 12px 20px;

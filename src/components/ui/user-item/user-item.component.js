@@ -5,7 +5,7 @@ import styles from './user-item.module.scss'
 import template from './user-item.template.html'
 
 export class UserItem extends ChildComponent {
-	constructor(user, isGray = false, onClick) {
+	constructor(user, isGrey = false, onClick) {
 		super()
 
 		if (!user) throw new Error('User should be passed!')
@@ -14,7 +14,7 @@ export class UserItem extends ChildComponent {
 
 		this.user = user
 		this.onClick = onClick
-		this.isGray = isGray
+		this.isGrey = isGrey
 	}
 
 	#preventDefault(event) {
@@ -36,8 +36,8 @@ export class UserItem extends ChildComponent {
 
 		$R(this.element).click(this.onClick || this.#preventDefault.bind(this))
 
-		if (!this.onClick) $R(this.element).attr('disable', '')
-		if (this.isGray) $R(this.element).addClass(styles.grey)
+		if (!this.onClick) $R(this.element).attr('disabled', '')
+		if (this.isGrey) $R(this.element).addClass(styles.grey)
 
 		return this.element
 	}

@@ -18,12 +18,12 @@
     @include m.transition(background-color);
 
     &:hover {
-      background-color: color.adjust(variables.$gray, $lightness: 7%);
+      background-color: color.adjust(variables.$grey, $lightness: 7%);
     }
   }
 
-  &.gray {
-    background-color: variables.$gray;
+  &.grey {
+    background-color: variables.$grey;
   }
 
   > img {
