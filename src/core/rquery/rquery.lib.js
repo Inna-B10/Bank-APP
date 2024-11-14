@@ -70,7 +70,7 @@ class RQuery {
 	/* ---------------------------------- Html ---------------------------------- */
 	/**
 	 * Get or set the inner HTML of the selected element.
-	 * @param {string} [htmlContent] - OptionalHTML content to set. Id not provided,the current inner HTML will be returned.
+	 * @param {string} [htmlContent] - Optional HTML content to set. If not provided, the current inner HTML will be returned.
 	 * @returns {RQuery|string} The current RQuery instance for chaining when setting HTML content, or the current inner HTML when getting.
 	 */
 
@@ -254,7 +254,7 @@ class RQuery {
 
 /**
  * Create a new RQuery instance for the given selector.
- * @param {string|HTMLElement} selector - A CSS selector string or an HTML
+ * @param {string|HTMLElement} selector - A CSS selector string or a HTML element
  * @returns {RQuery} A new RQuery instance for the given selector.
  */
 export function $R(selector) {

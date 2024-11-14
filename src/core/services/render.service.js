@@ -4,11 +4,13 @@ class RenderService {
 	/**
 	 * @param {string} html
 	 * @param {Array} components
-	 * @param {object} [styles]
+	 * @param {Object} [styles]
 	 * @returns {HTMLElement}
 	 */
 
 	htmlToElement(html, components = [], styles) {
+		// console.log(html)
+
 		const template = document.createElement('template')
 		template.innerHTML = html.trim()
 		const element = template.content.firstChild
