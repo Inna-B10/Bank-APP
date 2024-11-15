@@ -6,6 +6,7 @@ build
 .gitignore
 .prettierrc
 .env
+*template.html
 
 package.json
 package-lock.json
