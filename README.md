@@ -43,4 +43,9 @@ npm install vite-plugin-string    /* converts html files(templates) to modules *
   - [x]   Heading
   - [x]   Loading
   - [x]   user-item
+  - [x]   Logout
+  - [x]   search
+  - [ ]   Logo
+- [ ]  Fetch function 
+- [ ]  Notification error for user
 
