@@ -12,7 +12,10 @@
  * @returns {Promise<{isLoading: boolean, error: string|null, data: any|null}>} - An object containing the loading state, error, and data from the response.
  */
 import { SERVER_URL } from '@/config/url.config'
+import { NotificationService } from '../services/notification.service'
+import { StorageService } from '../services/storage.service'
 import { extractErrorMessage } from './extract-error-message'
+import { ACCESS_TOKEN_KEY } from '@/constants/auth.constants'
 
 export async function obQuery({
 	path,
@@ -27,8 +30,7 @@ export async function obQuery({
 		data = null
 	const url = `${SERVER_URL}/api${path}`
 
-	//TODO ACCESS_TOKEN from LocalStorage */
-	const accessToken = ''
+	const accessToken = new StorageService().getItem(ACCESS_TOKEN_KEY)
 
 	const requestOptions = {
 		method,
@@ -61,7 +63,7 @@ export async function obQuery({
 				onError(errorMessage)
 			}
 
-			//TODO Notification error for user */
+			new NotificationService().show('error', errorMessage)
 		}
 	} catch (errorData) {
 		const errorMessage = extractErrorMessage(errorData)
