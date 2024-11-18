@@ -109,6 +109,23 @@ class RQuery {
 		this.element.addEventListener('click', callback)
 		return this
 	}
+	/* --------------------------------- Submit --------------------------------- */
+	/**
+	 * Sets an event listener for the submit event of a form element
+	 * @param {function (Event):void} onSubmit - The event listener for the form's submit event
+	 */
+
+	submit(onSubmit) {
+		if (this.element.tagName.toLowerCase() === 'form') {
+			this.element.addEventListener('submit', e => {
+				e.preventDefault()
+				onSubmit(e)
+			})
+		} else {
+			throw new Error('Element must be a form')
+		}
+		return this
+	}
 	/* ---------------------------------- Input --------------------------------- */
 	/**
 	 * Set attributes and event listeners for an input element.
