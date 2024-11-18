@@ -1,4 +1,4 @@
-//Single pattern
+// Singleton pattern
 import { StorageService } from '../services/storage.service'
 import { ACCESS_TOKEN_KEY, USER_STORAGE_KEY } from '@/constants/auth.constants'
 
@@ -15,8 +15,8 @@ export class Store {
 	constructor(initialState) {
 		this.observers = []
 
-		this.StorageService = new StorageService()
-		const savedUser = this.StorageService.getItem(USER_STORAGE_KEY)
+		this.storageService = new StorageService()
+		const savedUser = this.storageService.getItem(USER_STORAGE_KEY)
 
 		const state = savedUser ? { user: savedUser } : initialState
 
@@ -58,7 +58,7 @@ export class Store {
 	 */
 
 	removeObserver(observer) {
-		this.observers = this.observers.filter(obs => obs != observer)
+		this.observers = this.observers.filter(obs => obs !== observer)
 	}
 	/* --------------------------------- Notify --------------------------------- */
 	/**
@@ -73,7 +73,7 @@ export class Store {
 	/* ---------------------------------- Login --------------------------------- */
 	/**
 	 * Log in a user and update the state and storage service
-	 * @param {Object} - The user object to log in
+	 * @param {Object} user - The user object to log in
 	 */
 
 	login(user, accessToken) {

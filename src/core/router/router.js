@@ -29,7 +29,7 @@ export class Router {
 			}
 		})
 	}
-
+	//* FIXME issue with window.history.pushState() when logged in user goes to Auth page
 	getCurrentPath() {
 		const base = import.meta.env.BASE_URL // Получаем базовый путь из конфигурации Vite
 		const pathname = window.location.pathname // Текущий путь в браузере

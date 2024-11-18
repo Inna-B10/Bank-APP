@@ -6,7 +6,7 @@ import { formatCardNumberWithDashes } from '@/utils/format/format-card-number'
 
 /**
  * Create a new RQuery instance.
- * @param {string|HTMLElement} selector - A CSS selector string or an HTML element.
+ * @param {string|HTMLElement} selector - A CSS selector string or an HTMLElement.
  */
 
 class RQuery {
@@ -100,7 +100,7 @@ class RQuery {
 	/* ---------------------------------- Click --------------------------------- */
 	/**
 	 * Attach a click event listener to the selected element.
-	 * @param {function(Event): void} - The event listener function to execute when the selected element is clicked.
+	 * @param {function(Event): void} callback - The event listener function to execute when the selected element is clicked.
 	 * The function will receive the event object as its argument.
 	 * @returns {RQuery} The current RQuery instance for chaining.
 	 */
@@ -111,8 +111,9 @@ class RQuery {
 	}
 	/* --------------------------------- Submit --------------------------------- */
 	/**
-	 * Sets an event listener for the submit event of a form element
-	 * @param {function (Event):void} onSubmit - The event listener for the form's submit event
+	 * Set an event listener for the submit event of a form element.
+	 * @param {function(Event): void} onSubmit - The event listener for the form's submit event.
+	 * @returns {RQuery} The current RQuery instance for chaining.
 	 */
 
 	submit(onSubmit) {
@@ -267,11 +268,31 @@ class RQuery {
 			return this
 		}
 	}
-}
+	/* ---------------------------------- Show ---------------------------------- */
+	/**
+	 * Shows the selected element by removing the 'display' style property
+	 * @returns {RQuery} The current RQuery instance for chaining
+	 */
 
+	show() {
+		this.element.style.removeProperty('display')
+		return this
+	}
+
+	/* ---------------------------------- Hide ---------------------------------- */
+	/**
+	 * Hides the selected element by setting its display style to 'none'
+	 * @returns {RQuery} The current RQuery instance for chaining
+	 */
+
+	hide() {
+		this.element.style.display = 'none'
+		return this
+	}
+}
 /**
  * Create a new RQuery instance for the given selector.
- * @param {string|HTMLElement} selector - A CSS selector string or a HTML element
+ * @param {string|HTMLElement} selector - A CSS selector string or a HTMLElement.
  * @returns {RQuery} A new RQuery instance for the given selector.
  */
 export function $R(selector) {
