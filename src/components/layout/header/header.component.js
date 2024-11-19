@@ -17,6 +17,11 @@ export class Header extends ChildComponent {
 		this.store.addObserver(this)
 
 		this.router = router
+
+		this.userItem = new UserItem({
+			avatarPath: '/',
+			name: 'User'
+		})
 	}
 	update() {
 		this.user = this.store.state.user
@@ -24,6 +29,7 @@ export class Header extends ChildComponent {
 
 		if (this.user) {
 			authSideElement.show()
+			this.userItem.update(this.user)
 			this.router.navigate('./')
 		} else {
 			authSideElement.hide()
@@ -33,15 +39,7 @@ export class Header extends ChildComponent {
 	render() {
 		this.element = renderService.htmlToElement(
 			template,
-			[
-				Logo,
-				new LogoutButton({ router: this.router }),
-				Search,
-				new UserItem({
-					avatarPath: `${import.meta.env.BASE_URL}/my-avatar.jpg`,
-					name: 'User'
-				})
-			],
+			[Logo, new LogoutButton({ router: this.router }), Search, this.userItem],
 			styles
 		)
 		this.update()
