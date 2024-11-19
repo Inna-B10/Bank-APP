@@ -1,7 +1,7 @@
 import { obQuery } from '@/core/ob-query/ob-query.lib'
 
 export class StatisticService {
-	#BASE_URL = './statistics'
+	#BASE_URL = '/statistics'
 
 	main(onSuccess) {
 		return obQuery({

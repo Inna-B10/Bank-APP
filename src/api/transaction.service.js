@@ -1,7 +1,7 @@
 import { obQuery } from '@/core/ob-query/ob-query.lib'
 
 export class TransactionService {
-	#BASE_URL = './transactions'
+	#BASE_URL = '/transactions'
 
 	getAll(onSuccess) {
 		return obQuery({
