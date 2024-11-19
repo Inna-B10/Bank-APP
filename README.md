@@ -26,26 +26,19 @@ npm install vite-plugin-string    /* converts html files(templates) to modules *
 - [x] routing
 - [x] Layout, links
 - [x] class BaseScreen, page's title
-- [x] RenderService:
-  - [x] method htmlToElement
-  - [x] method replaceComponentTags
-  - [x] method applyModuleStyles
+- [x] RenderService
 - [ ]  lib rQuery and methods
-  - [x] find, append, before
-  - [x] html, text, click
-  - [x] css, addClass, removeClass, attr
-  - [x] inputs
 - [x]  Change layout and router using RQuery
 - [ ]  Site Header
-- [ ]  UI components:
-  - [x]   Button
-  - [x]   Field
-  - [x]   Heading
-  - [x]   Loading
-  - [x]   user-item
-  - [x]   Logout
-  - [x]   search
-  - [ ]   Logo
-- [ ]  Fetch function 
-- [ ]  Notification error for user
+- [ ]  UI components
+- [x]  Fetch function 
+- [x]  Notification error for user
+- [x]  Services for working with API: auth, card, static, transaction, user
+- [x]  Global store and Singleton pattern
+- [x]  Auth page (functional)
+  - [x] Log in/Register
+  - [x] Fix issue with window.history.pushState() when logged in user goes to Auth page or refresh
+- [x]  Services for validation and working with forms
+- [x]  UserItem in the header + Search contacts
+- [ ]  Card info block
 
