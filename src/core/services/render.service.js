@@ -9,8 +9,6 @@ class RenderService {
 	 */
 
 	htmlToElement(html, components = [], styles) {
-		// console.log(html)
-
 		const template = document.createElement('template')
 		template.innerHTML = html.trim()
 		const element = template.content.firstChild

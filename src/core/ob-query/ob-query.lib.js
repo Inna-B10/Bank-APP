@@ -1,3 +1,9 @@
+import { SERVER_URL } from '@/config/url.config'
+import { NotificationService } from '../services/notification.service'
+import { StorageService } from '../services/storage.service'
+import { extractErrorMessage } from './extract-error-message'
+import { ACCESS_TOKEN_KEY } from '@/constants/auth.constants'
+
 /**
  * obQuery is a minimalistic library for handling API requests.
  * Fetch data from the API with provided options.
@@ -11,12 +17,6 @@
  * @param {Function} [options.onError=null] - Callback function to be called on error response.
  * @returns {Promise<{isLoading: boolean, error: string|null, data: any|null}>} - An object containing the loading state, error, and data from the response.
  */
-import { SERVER_URL } from '@/config/url.config'
-import { NotificationService } from '../services/notification.service'
-import { StorageService } from '../services/storage.service'
-import { extractErrorMessage } from './extract-error-message'
-import { ACCESS_TOKEN_KEY } from '@/constants/auth.constants'
-
 export async function obQuery({
 	path,
 	body = null,
@@ -31,6 +31,7 @@ export async function obQuery({
 	const url = `${SERVER_URL}/api${path}`
 
 	const accessToken = new StorageService().getItem(ACCESS_TOKEN_KEY)
+	//console.log(accessToken)
 
 	const requestOptions = {
 		method,

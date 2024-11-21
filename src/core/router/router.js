@@ -33,7 +33,7 @@ export class Router {
 	getCurrentPath() {
 		const base = import.meta.env.BASE_URL // Получаем базовый путь из конфигурации Vite
 		const pathname = window.location.pathname // Текущий путь в браузере
-		return pathname.replace(base, '/') || '/' // Убираем базовый путь
+		return pathname.replace(base, './') // Убираем базовый путь
 	}
 
 	navigate(path) {

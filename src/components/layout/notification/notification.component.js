@@ -7,8 +7,6 @@ export class Notification extends ChildComponent {
 	render() {
 		this.element = renderService.htmlToElement(template, [], styles)
 
-		// window.notification = new NotificationService()
-
 		return this.element
 	}
 }

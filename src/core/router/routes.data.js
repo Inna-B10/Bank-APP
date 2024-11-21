@@ -4,15 +4,15 @@ import { Home } from '@/components/screens/home/home.component'
 
 export const ROUTES = [
 	{
-		path: '/',
+		path: './',
 		component: Home
 	},
 	{
-		path: '/auth',
+		path: './auth',
 		component: Auth
 	},
 	{
-		path: '/about',
+		path: './about',
 		component: About
 	}
 ]
