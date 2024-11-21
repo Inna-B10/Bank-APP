@@ -1,0 +1,20 @@
+@use '@/styles/mixins' as m;
+
+// @use '@/styles/variables';
+.actions {
+  @include m.dashboard-section('small');
+
+  > label {
+    margin-bottom: 1rem;
+  }
+
+  > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+    > button {
+      padding: 10px;
+    }
+  }
+}

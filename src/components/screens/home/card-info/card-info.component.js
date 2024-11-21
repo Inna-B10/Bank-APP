@@ -7,6 +7,7 @@ import { formatToCurrency } from '@/utils/format/format-to-currency'
 import { CardService } from '@/api/card.service'
 import styles from './card-info.module.scss'
 import template from './card-info.template.html'
+import { BALANCE_UPDATED } from '@/constants/event.constants'
 
 const CODE = '*****'
 
@@ -15,11 +16,28 @@ export class CardInfo extends ChildComponent {
 		super()
 
 		this.store = Store.getInstance()
-		console.log(this.store)
 
-		this.card = new CardService()
+		this.cardService = new CardService()
 
 		this.element = renderService.htmlToElement(template, [], styles)
+
+		this.#addListeners()
+	}
+
+	#addListeners() {
+		document.addEventListener(BALANCE_UPDATED, this.#onBalanceUpdated)
+	}
+
+	#removeListeners() {
+		document.removeEventListener(BALANCE_UPDATED, this.#onBalanceUpdated)
+	}
+
+	#onBalanceUpdated = () => {
+		this.fetchData()
+	}
+
+	destroy() {
+		this.#removeListeners()
 	}
 
 	#copyCardNumber(e) {
@@ -69,8 +87,7 @@ export class CardInfo extends ChildComponent {
 	}
 
 	fetchData() {
-		this.card.byUser(data => {
-			console.log(data)
+		this.cardService.byUser(data => {
 			if (data?.id) {
 				this.card = data
 				this.fillElements()
@@ -83,7 +100,6 @@ export class CardInfo extends ChildComponent {
 
 	render() {
 		if (this.store.state.user) {
-			console.log('user yes:', this.store.state.user.name)
 			this.fetchData()
 			return this.element
 		} else {

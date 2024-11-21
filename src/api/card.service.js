@@ -7,7 +7,7 @@ export class CardService {
 
 	constructor() {
 		this.store = Store.getInstance().state
-		console.log(this.store)
+
 		this.notificationService = new NotificationService()
 	}
 	/* --------------------------------- ByUser --------------------------------- */
