@@ -1,6 +1,5 @@
 @use '@/styles/mixins' as m;
 
-// @use '@/styles/variables';
 .actions {
   @include m.dashboard-section('small');
 
