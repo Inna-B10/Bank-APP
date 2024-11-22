@@ -1,0 +1,12 @@
+@use '@/styles/mixins' as m;
+@use '@/styles/variables';
+
+.circle-chart {
+  @include m.flex-horizontal-center;
+  justify-content: center;
+  background-color: variables.$grey;
+  padding: 0.5rem 1.2rem;
+  border-radius: variables.$radius;
+  width: max-content;
+  margin: 0 auto 1.6rem;
+}
