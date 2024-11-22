@@ -61,6 +61,7 @@ export async function obQuery({
 			const errorMessage = extractErrorMessage(errorData)
 
 			if (onError) {
+				// console.log(errorMessage)
 				onError(errorMessage)
 			}
 
@@ -68,7 +69,8 @@ export async function obQuery({
 		}
 	} catch (errorData) {
 		const errorMessage = extractErrorMessage(errorData)
-		if (errorMessage) {
+		if (onError) {
+			// console.log(errorMessage)
 			onError(errorMessage)
 		}
 	} finally {

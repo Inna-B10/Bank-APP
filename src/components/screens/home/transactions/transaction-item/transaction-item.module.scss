@@ -1,5 +1,6 @@
 @use '@/styles/variables';
 @use '@/styles/mixins' as m;
+@use "sass:color";
 
 .transaction-item {
   @include m.transition(background-color);
@@ -43,13 +44,13 @@
   }
 
   > div {
-    @include flex-horizontal-center;
+    @include m.flex-horizontal-center;
 
     &:nth-child(1) {
       margin-left: 1rem;
 
       > div {
-        @include transition(opacity);
+        @include m.transition(opacity);
         background-color: variables.$primary;
         border-radius: 50%;
         width: 45px;
@@ -73,7 +74,7 @@
 
     &:nth-child(2) {
       > div {
-        @include flex-horizontal-center;
+        @include m.flex-horizontal-center;
         background-color: variables.$grey;
         border-radius: 50%;
         width: 40px;
@@ -89,7 +90,7 @@
       }
 
       > span {
-        color: lighten(variables.$text-grey, 8%);
+        color: color.adjust(variables.$text-grey, $lightness: 8%);
         font-size: 18px;
       }
     }

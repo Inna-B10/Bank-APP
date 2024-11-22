@@ -39,6 +39,7 @@ export class TransferField extends ChildComponent {
 
 		const reset = () => {
 			$R(event.target).removeAttr('disabled').text('Send')
+			inputElement.value('')
 		}
 
 		if (!toCardNumber) {
