@@ -37,8 +37,15 @@ npm install vite-plugin-string    /* converts html files(templates) to modules *
 - [x]  Global store and Singleton pattern
 - [x]  Auth page (functional)
   - [x] Log in/Register
-  - [x] Fix issue with window.history.pushState() when logged in user goes to Auth page or refresh
+  - [ ] Fix issue with accessToken
 - [x]  Services for validation and working with forms
 - [x]  UserItem in the header + Search contacts
-- [ ]  Card info block
+- [x]  Card info block
+- [x]  Deposits and withdrawals (update balance)
+- [x]  Transfer money (update balance)
+- [x]  Contacts
+- [x]  List of transactions
+- [x]  Statistic
+- [x]  SVG graphics
+- [ ]  Fix bugs
 
