@@ -27,17 +27,17 @@ npm install vite-plugin-string    /* converts html files(templates) to modules *
 - [x] Layout, links
 - [x] class BaseScreen, page's title
 - [x] RenderService
-- [ ]  lib rQuery and methods
+- [x]  lib rQuery and methods
 - [x]  Change layout and router using RQuery
-- [ ]  Site Header
-- [ ]  UI components
+- [x]  Site Header
+- [x]  UI components
 - [x]  Fetch function 
 - [x]  Notification error for user
 - [x]  Services for working with API: auth, card, static, transaction, user
 - [x]  Global store and Singleton pattern
 - [x]  Auth page (functional)
   - [x] Log in/Register
-  - [ ] Fix issue with accessToken
+  - [x] Fix issue with accessToken
 - [x]  Services for validation and working with forms
 - [x]  UserItem in the header + Search contacts
 - [x]  Card info block
@@ -47,5 +47,5 @@ npm install vite-plugin-string    /* converts html files(templates) to modules *
 - [x]  List of transactions
 - [x]  Statistic
 - [x]  SVG graphics
-- [ ]  Fix bugs
+- [x]  Fix bugs
 
