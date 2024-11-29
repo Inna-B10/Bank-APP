@@ -2,7 +2,7 @@ import ChildComponent from '@/core/component/child.component'
 import { $R } from '@/core/rquery/rquery.lib'
 import renderService from '@/core/services/render.service'
 import styles from './button.module.scss'
-import template from './button.template.html'
+import template from './button.template.html?raw'
 
 export class Button extends ChildComponent {
 	constructor({ children, onClick, variant }) {

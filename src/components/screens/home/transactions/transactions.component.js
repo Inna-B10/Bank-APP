@@ -9,8 +9,8 @@ import {
 } from '@/components/ui/loader/loader.component'
 import { TransactionService } from '@/api/transaction.service'
 import styles from './transactions.module.scss'
-import template from './transactions.template.html'
 import { TransactionItem } from './transaction-item/transaction-item.component'
+import template from './transactions.template.html?raw'
 import { TRANSACTION_COMPLETED } from '@/constants/event.constants'
 
 export class Transactions extends ChildComponent {

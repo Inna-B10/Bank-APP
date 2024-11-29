@@ -2,7 +2,7 @@ import ChildComponent from '@/core/component/child.component'
 import { $R } from '@/core/rquery/rquery.lib'
 import renderService from '@/core/services/render.service'
 import styles from './statistics-item.module.scss'
-import template from './statistics-item.template.html'
+import template from './statistics-item.template.html?raw'
 
 /**
  * StatisticsItem is a class representing a statistic item component.

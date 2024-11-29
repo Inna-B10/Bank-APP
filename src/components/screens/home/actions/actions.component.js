@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button/button.component'
 import { Field } from '@/components/ui/field/field.component'
 import { CardService } from '@/api/card.service'
 import styles from './actions.module.scss'
-import template from './actions.template.html'
+import template from './actions.template.html?raw'
 import { BALANCE_UPDATED } from '@/constants/event.constants'
 
 export class Actions extends ChildComponent {

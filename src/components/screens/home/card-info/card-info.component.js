@@ -7,7 +7,7 @@ import { formatCardNumber } from '@/utils/format/format-card-number'
 import { formatToCurrency } from '@/utils/format/format-to-currency'
 import { CardService } from '@/api/card.service'
 import styles from './card-info.module.scss'
-import template from './card-info.template.html'
+import template from './card-info.template.html?raw'
 import { BALANCE_UPDATED } from '@/constants/event.constants'
 
 const CODE = '*****'

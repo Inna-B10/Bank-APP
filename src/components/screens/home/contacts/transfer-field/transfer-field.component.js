@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button/button.component'
 import { Field } from '@/components/ui/field/field.component'
 import { CardService } from '@/api/card.service'
 import styles from './transfer-field.module.scss'
-import template from './transfer-field.template.html'
+import template from './transfer-field.template.html?raw'
 import {
 	BALANCE_UPDATED,
 	TRANSACTION_COMPLETED

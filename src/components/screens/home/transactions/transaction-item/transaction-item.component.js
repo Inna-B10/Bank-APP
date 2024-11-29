@@ -4,7 +4,7 @@ import renderService from '@/core/services/render.service'
 import { formatToCurrency } from '@/utils/format/format-to-currency'
 import { formatDate } from '@/utils/format/format-to-date'
 import styles from './transaction-item.module.scss'
-import template from './transaction-item.template.html'
+import template from './transaction-item.template.html?raw'
 
 export class TransactionItem extends ChildComponent {
 	constructor(transaction) {

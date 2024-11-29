@@ -7,7 +7,7 @@ import { debounce } from '@/utils/debounce.util'
 import { formatCardNumberWithDashes } from '@/utils/format/format-card-number'
 import { UserService } from '@/api/user.service'
 import styles from './search.module.scss'
-import template from './search.template.html'
+import template from './search.template.html?raw'
 
 export class Search extends ChildComponent {
 	constructor() {

@@ -1,7 +1,7 @@
 import ChildComponent from '@/core/component/child.component'
 import renderService from '@/core/services/render.service'
 import styles from './notification.module.scss'
-import template from './notification.template.html'
+import template from './notification.template.html?raw'
 
 export class Notification extends ChildComponent {
 	render() {
