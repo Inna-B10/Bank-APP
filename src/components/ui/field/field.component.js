@@ -2,7 +2,7 @@ import ChildComponent from '@/core/component/child.component'
 import { $R } from '@/core/rquery/rquery.lib'
 import renderService from '@/core/services/render.service'
 import styles from './field.module.scss'
-import template from './field.template.html'
+import template from './field.template.html?raw'
 
 export class Field extends ChildComponent {
 	constructor({ placeholder, type = 'text', value = '', name, variant }) {

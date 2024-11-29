@@ -10,9 +10,9 @@ import {
 import { formatToCurrency } from '@/utils/format/format-to-currency'
 import { StatisticService } from '@/api/statistic.service'
 import styles from './statistics.module.scss'
-import template from './statistics.template.html'
 import { CircleChart } from './circle-chart/circle-chart.component'
 import { StatisticsItem } from './statistics-item/statistics-item.component'
+import template from './statistics.template.html?raw'
 import { TRANSACTION_COMPLETED } from '@/constants/event.constants'
 
 export class Statistics extends ChildComponent {

@@ -18,7 +18,7 @@ export default defineConfig({
 	},
 	plugins: [
 		string({
-			include: '**/*.template.html'
+			include: '**/*.html'
 		})
 	],
 	base: '/bank-js-intensive/'

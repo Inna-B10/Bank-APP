@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button/button.component'
 import { Field } from '@/components/ui/field/field.component'
 import { AuthService } from '@/api/auth.service'
 import styles from './auth.module.scss'
-import template from './auth.template.html'
+import template from './auth.template.html?raw'
 
 export class Auth extends BaseScreen {
 	#isTypeLogin = true

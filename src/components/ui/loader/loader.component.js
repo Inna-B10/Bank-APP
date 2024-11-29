@@ -1,7 +1,6 @@
 import ChildComponent from '@/core/component/child.component'
 import renderService from '@/core/services/render.service'
-
-import template from './loader.template.html'
+import template from './loader.template.html?raw'
 
 export const LOADER_SELECTOR = '[data-component="loader"]'
 

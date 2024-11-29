@@ -11,7 +11,7 @@ import { UserItem } from '@/components/ui/user-item/user-item.component'
 import { formatCardNumberWithDashes } from '@/utils/format/format-card-number'
 import { UserService } from '@/api/user.service'
 import styles from './contacts.module.scss'
-import template from './contacts.template.html'
+import template from './contacts.template.html?raw'
 import {
 	TRANSFER_FIELD_SELECTOR,
 	TransferField

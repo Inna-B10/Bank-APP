@@ -2,7 +2,7 @@ import ChildComponent from '@/core/component/child.component'
 import { $R } from '@/core/rquery/rquery.lib'
 import renderService from '@/core/services/render.service'
 import styles from './donut-chart.module.scss'
-import template from './donut-chart.template.html'
+import template from './donut-chart.template.html?raw'
 
 /**
  * DonutChart class for creating a simple donut chart with customizable options.
