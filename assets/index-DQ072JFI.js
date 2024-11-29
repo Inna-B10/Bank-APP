@@ -16,7 +16,7 @@ var ne=Object.defineProperty;var yt=s=>{throw TypeError(s)};var se=(s,e,t)=>e in
 </nav>\r
 `;class fe extends m{render(){return this.element=h.htmlToElement(pe,[],ue),this.element}}const ve="_logout_yeasz_1",ge={logout:ve},we=`<div class='logout'>\r
 	<button title='Logout'>\r
-		<svg xmlns='http:\\/\\/www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor'>\r
+		<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor'>\r
 			<path stroke-linecap='round' stroke-linejoin='round' d='M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9' />\r
 		</svg>\r
 	</button>\r
@@ -28,7 +28,7 @@ var ne=Object.defineProperty;var yt=s=>{throw TypeError(s)};var se=(s,e,t)=>e in
 	<component-field></component-field>
 	<component-button></component-button>
 </div>`,W="balanceUpdated",z="transactionCompleted",Pt='[name="card-number"]';class Pe extends m{constructor(){super();ot(this,"handleTransfer",t=>{t.preventDefault(),this.store.user||this.notificationService.show("error","You need authorization!"),i(t.target).text("Sending...").attr("disabled",!0);const n=i(this.element).find("input"),r=n.value().replaceAll("-",""),o=()=>{i(t.target).removeAttr("disabled").text("Send"),n.value("")};if(!r){q.showError(i(this.element).find("label")),o();return}let a=prompt("Transfer amount");this.cardService.transfer({amount:a,toCardNumber:r},()=>{n.value(""),a="",document.dispatchEvent(new Event(z)),document.dispatchEvent(new Event(W))}),o()});this.store=p.getInstance().state,this.cardService=new vt,this.notificationService=new R}render(){return this.element=h.htmlToElement(Be,[new V({name:"card-number",placeholder:"xxxx-xxxx-xxxx-xxxx",variant:"credit-card"}),new F({children:"Send",variant:"purple",onClick:this.handleTransfer})],ze),this.store.user||i(this.element).find("input").attr("disabled",!0),this.element}}function Ne(s,e){let t;return function(...n){const r=()=>{clearTimeout(t),s.apply(this,n)};clearTimeout(t),t=setTimeout(r,e)}}var J;class Nt{constructor(){d(this,J,"/users")}getAll(e,t){return T({path:`${l(this,J)}${e?`?${new URLSearchParams({searchTerm:e})}`:""}`,onSuccess:t})}}J=new WeakMap;const Re="_search_ibd97_1",De="_results_ibd97_19",Ue="_showIn_ibd97_1",je="_item_ibd97_32",He="_visible_ibd97_37",ct={search:Re,results:De,showIn:Ue,item:je,visible:He},qe=`<div class='search'>\r
-	<svg xmlns='http:\\/\\/www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor'>\r
+	<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor'>\r
 		<path stroke-linecap='round' stroke-linejoin='round' d='M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z' />\r
 	</svg>\r
 	<input />\r
@@ -60,7 +60,7 @@ var ne=Object.defineProperty;var yt=s=>{throw TypeError(s)};var se=(s,e,t)=>e in
 </div>`;class ln extends m{render(){return this.element=h.htmlToElement(cn,[],an),this.element}}const dn="_home_18eeu_1",hn={home:dn},mn="_actions_4r799_1",un={actions:mn},pn=`<div class='actions'>
 	<component-field></component-field>
 	<div id='action-buttons'></div>
-</div>`;class fn extends m{constructor(){super(),this.store=p.getInstance().state,this.cardService=new vt,this.notificationService=new R}updateBalance(e,t){e.preventDefault(),this.store.user||this.notificationService.show("error","You need authorization!"),i(e.target).text("Sending...").attr("disabled",!0);const n=i(this.element).find("input"),r=n.value();if(!r){q.showError(i(this.element).find("label")),i(e.target).removeAttr("disabled").text(t);return}this.cardService.updateBalance(r,t,()=>{n.value("");const o=new Event(W);document.dispatchEvent(o)}),i(e.target).removeAttr("disabled").text(t)}render(){return this.element=h.htmlToElement(pn,[new V({name:"amount",placeholder:"Enter amount",type:"number"})],un),i(this.element).find("#action-buttons").append(new F({children:"Top-up",variant:"green",onClick:e=>this.updateBalance(e,"top-up")}).render()).append(new F({children:"Withdrawal",variant:"purple",onClick:e=>this.updateBalance(e,"withdrawal")}).render()),this.store.user||i(this.element).find("input").attr("disabled",!0),this.element}}const vn=`<svg xmlns='http:\\/\\/www.w3.org/2000/svg' xml:space='preserve' x='0' y='0' style='height:100%;width:100%;background:0 0;shape-rendering:auto' version='1.1' viewBox='0 0 100 100' data-component='loader'>\r
+</div>`;class fn extends m{constructor(){super(),this.store=p.getInstance().state,this.cardService=new vt,this.notificationService=new R}updateBalance(e,t){e.preventDefault(),this.store.user||this.notificationService.show("error","You need authorization!"),i(e.target).text("Sending...").attr("disabled",!0);const n=i(this.element).find("input"),r=n.value();if(!r){q.showError(i(this.element).find("label")),i(e.target).removeAttr("disabled").text(t);return}this.cardService.updateBalance(r,t,()=>{n.value("");const o=new Event(W);document.dispatchEvent(o)}),i(e.target).removeAttr("disabled").text(t)}render(){return this.element=h.htmlToElement(pn,[new V({name:"amount",placeholder:"Enter amount",type:"number"})],un),i(this.element).find("#action-buttons").append(new F({children:"Top-up",variant:"green",onClick:e=>this.updateBalance(e,"top-up")}).render()).append(new F({children:"Withdrawal",variant:"purple",onClick:e=>this.updateBalance(e,"withdrawal")}).render()),this.store.user||i(this.element).find("input").attr("disabled",!0),this.element}}const vn=`<svg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' x='0' y='0' style='height:100%;width:100%;background:0 0;shape-rendering:auto' version='1.1' viewBox='0 0 100 100' data-component='loader'>\r
 	<g class='ldl-scale' style='transform-origin:50% 50%;transform:rotate(0deg) scale(.8,.8)'>\r
 		<g class='ldl-ani'>\r
 			<g class='ldl-layer' style='transform-origin:50px 50px;transform:scale(.91);animation:1.11111s linear -.625s infinite normal forwards running breath-853b0b7b-a60c-4c08-a5c3-c749855f7945'>\r
@@ -109,7 +109,7 @@ var ne=Object.defineProperty;var yt=s=>{throw TypeError(s)};var se=(s,e,t)=>e in
 </svg>`,gt='[data-component="loader"]';class it extends m{constructor(e=100,t=100){super(),this.width=e,this.height=t}render(){return this.element=h.htmlToElement(vn,[]),this.element.style=`width: ${this.width}px; height: ${this.height}px`,this.element.classList.add("bounce"),this.element}}function Y(s){return new Intl.NumberFormat("no-NO",{currency:"NOK",style:"currency"}).format(s)}const gn="_line_f61m5_9",wn="_cvc_f61m5_61",Ct={"card-info":"_card-info_f61m5_1",line:gn,"card-number":"_card-number_f61m5_15","card-icon":"_card-icon_f61m5_15",cvc:wn},$t=`<section class='card-info'>\r
 	<div class='card-number'>\r
 		<div class='card-icon'>\r
-			<svg xmlns='http:\\/\\/www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor'>\r
+			<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor'>\r
 				<path stroke-linecap='round' stroke-linejoin='round' d='M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z' />\r
 			</svg>\r
 		</div>\r
@@ -133,7 +133,7 @@ var ne=Object.defineProperty;var yt=s=>{throw TypeError(s)};var se=(s,e,t)=>e in
 			<div>\r
 				<span id='card-cvc'></span>\r
 				<button id='toggle-cvc'>\r
-					<svg xmlns='http:\\/\\/www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor'>\r
+					<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor'>\r
 						<path stroke-linecap='round' stroke-linejoin='round' d='M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z' />\r
 						<path stroke-linecap='round' stroke-linejoin='round' d='M15 12a3 3 0 11-6 0 3 3 0 016 0z' />\r
 					</svg>\r
@@ -183,7 +183,7 @@ var ne=Object.defineProperty;var yt=s=>{throw TypeError(s)};var se=(s,e,t)=>e in
 </div>`;var y,Kt,Jt,ut;class qn extends m{constructor(){super();d(this,y);this.store=p.getInstance().state,this.statisticService=new An,this.element=h.htmlToElement(Hn,[new wt("Statistics")],In),c(this,y,Kt).call(this)}destroy(){c(this,y,Jt).call(this)}renderChart(t,n){const r=t+n;let o=t*100/r,a=100-o;return t&&!n&&(o=100,a=.1),!t&&n&&(o=.1,a=100),new Rn(o,a).render()}fetchData(){this.statisticService.main(t=>{if(!t)return;const n=this.element.querySelector(gt);n&&n.remove();const r=i(this.element).find("#statistics-items");r.text("");const o=i(this.element).find("#circle-chart");o.text(""),r.append(new Lt("Income:",Y(t[0].value),"green").render()).append(new Lt("Expense:",Y(t[1].value),"purple").render()),o.append(this.renderChart(t[0].value,t[1].value))})}render(){return this.store.user&&(i(this.element).append(new it().render()),setTimeout(()=>this.fetchData(),500)),this.element}}y=new WeakSet,Kt=function(){document.addEventListener(z,c(this,y,ut).bind(this))},Jt=function(){document.removeEventListener(z,c(this,y,ut).bind(this))},ut=function(){this.fetchData()};var st;class Fn{constructor(){d(this,st,"/transactions")}getAll(e){return T({path:l(this,st)+`?${new URLSearchParams({orderBy:"desc"})}`,onSuccess:e})}}st=new WeakMap;const Vn="_transactions_vmmkx_1",Wn={transactions:Vn};function Yn(s){const e=new Date(s),t={month:"short",day:"numeric",year:"numeric"};return e.toLocaleDateString("en-US",t)}const Gn="_slideIn_z2q3q_1",Kn="_income_z2q3q_21",It={"transaction-item":"_transaction-item_z2q3q_1",slideIn:Gn,income:Kn},Jn=`<div class='transaction-item'>\r
 	<div>\r
 		<div>\r
-			<svg xmlns='http:\\/\\/www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' id='transaction-icon'>\r
+			<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' id='transaction-icon'>\r
 \r
 				<path stroke-linecap='round' stroke-linejoin='round' d='M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z' />\r
 \r
@@ -196,7 +196,7 @@ var ne=Object.defineProperty;var yt=s=>{throw TypeError(s)};var se=(s,e,t)=>e in
 \r
 	<div>\r
 		<div>\r
-			<svg xmlns='http:\\/\\/www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-6 h-6'>\r
+			<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-6 h-6'>\r
 				<path stroke-linecap='round' stroke-linejoin='round' d='M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5' />\r
 			</svg>\r
 \r
