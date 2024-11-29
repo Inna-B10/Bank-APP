@@ -1,12 +1,12 @@
-node_modules
-dist
-out
-build
+node_modules/*
+dist/*
+out/*
+build/*
 .vscode-test
 .gitignore
 .prettierrc
 .env
-*template.html
+*.template.html
 
 package.json
 package-lock.json
