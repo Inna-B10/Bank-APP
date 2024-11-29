@@ -1,6 +1,5 @@
 import path from 'path'
 import { defineConfig } from 'vite'
-import string from 'vite-plugin-string'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,10 +15,5 @@ export default defineConfig({
 			}
 		}
 	},
-	plugins: [
-		string({
-			include: '**/*.html'
-		})
-	],
 	base: '/bank-js-intensive/'
 })
