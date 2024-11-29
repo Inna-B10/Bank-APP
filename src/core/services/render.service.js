@@ -9,13 +9,15 @@ class RenderService {
 	 */
 
 	htmlToElement(html, components = [], styles) {
-		// const template = document.createElement('template')
-		// template.innerHTML = html.trim()
-		// const element = template.content.firstChild
+		console.log('Components array:', components)
 
-		const parser = new DOMParser()
-		const doc = parser.parseFromString(html, 'text/html')
-		const element = doc.body.firstChild
+		const template = document.createElement('template')
+		template.innerHTML = html.trim()
+		const element = template.content.firstChild
+
+		// const parser = new DOMParser()
+		// const doc = parser.parseFromString(html, 'text/html')
+		// const element = doc.body.firstChild
 
 		if (styles) {
 			this.#applyModuleStyles(styles, element)
@@ -39,6 +41,9 @@ class RenderService {
 				const componentName = elementTagName
 					.replace(componentTagPattern, '')
 					.replace(/-/g, '')
+
+				console.log('Looking for component:', componentName)
+
 				const foundComponent = components.find(Component => {
 					const instance =
 						Component instanceof ChildComponent ? Component : new Component()
@@ -53,9 +58,11 @@ class RenderService {
 							: new foundComponent().render()
 					element.replaceWith(componentContent)
 				} else {
-					console.error(
-						`Component "${componentName}" not found in the provided components array.`
-					)
+					// console.error(
+					// 	`Component "${componentName}" not found in the provided components array.`
+					// )
+					console.warn(`Component "${componentName}" not found. Skipping.`)
+					continue
 				}
 			}
 		}
