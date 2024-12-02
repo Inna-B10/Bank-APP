@@ -1,4 +1,9 @@
-# Bank APP
+# Bank APP (Online intensive course)
+
+Simple application to show recent transaction, statistic, to send money to contacts, simulate top up and withdrawal account, search contacts.
+
+During the course only the frontend was developed. 
+The backend was given initially.(Can be found in the archive bank-js-intensive-server.zip)
 
 ## Vite + Vanilla JavaScript
 
@@ -17,9 +22,6 @@ npm install sass
 npm i eslint
 
 npm install -D @types/node      /* for support aliasing paths */
-
-npm install vite-plugin-string    /* converts html files(templates) to modules */
-
 ```
 
 ### TO DO
