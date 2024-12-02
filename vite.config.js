@@ -15,5 +15,8 @@ export default defineConfig({
 			}
 		}
 	},
-	base: '/bank-js-intensive/'
+	base: '/bank-js-intensive/',
+	build: {
+		minify: false
+	}
 })

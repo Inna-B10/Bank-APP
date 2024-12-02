@@ -31,7 +31,6 @@ export async function obQuery({
 	const url = `${SERVER_URL}/api${path}`
 
 	const accessToken = new StorageService().getItem(ACCESS_TOKEN_KEY)
-	//console.log(accessToken)
 
 	const requestOptions = {
 		method,
