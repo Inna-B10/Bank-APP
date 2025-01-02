@@ -1,11 +1,13 @@
-# Bank APP (Online intensive course)
+### Project name: Bank APP
+### Online intensive course - client side
+---
 
 Simple application to show recent transaction, statistic, to send money to contacts, simulate top up and withdrawal account, search contacts.
 
 During the course only the frontend was developed. 
-The backend was given initially.(Can be found in the archive bank-js-intensive-server.zip)
+The backend was given initially (can be found <a href="https://github.com/Inna-B10/bank-js-intensive/tree/main" target="_blank">here</a>).
 
-## Vite + Vanilla JavaScript
+### Vite + Vanilla JavaScript
 
 in additional used:
 
