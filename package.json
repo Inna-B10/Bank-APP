@@ -1,7 +1,7 @@
 {
-	"name": "bank-js-intensive",
+	"name": "Bank-APP-client",
 	"description": "Intensive project:  JavaScript for all",
-	"homepage": "https://github.com/Inna-B10/bank-js-intensive",
+	"homepage": "https://github.com/Inna-B10/Bank-APP",
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
