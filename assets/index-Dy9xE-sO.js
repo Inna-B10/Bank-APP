@@ -892,7 +892,7 @@ _BASE_URL = new WeakMap();
 const styles$e = {
   "transfer-field": "_transfer-field_lzd97_1"
 };
-const template$h = "<div class='transfer-field'>\n	<component-field></component-field>\n	<component-button></component-button>\n</div>";
+const template$h = "<div class='transfer-field'>\r\n	<component-field></component-field>\r\n	<component-button></component-button>\r\n</div>";
 const BALANCE_UPDATED = "balanceUpdated";
 const TRANSACTION_COMPLETED = "transactionCompleted";
 const TRANSFER_FIELD_SELECTOR = '[name="card-number"]';
@@ -1163,7 +1163,7 @@ const auth = "_auth_ya0cv_1";
 const styles$c = {
   auth
 };
-const template$d = "<div class='auth'>\n	<form>\n		<h1>Sign in</h1>\n		<div id='auth-inputs'></div>\n		<div style='text-align: center;'>\n		<component-button></component-button>\n		</div>\n		<footer>\n			<button id='change-form-type'>Register</button>\n		</footer>\n	</form>\n</div>\n";
+const template$d = "<div class='auth'>\r\n	<form>\r\n		<h1>Sign in</h1>\r\n		<div id='auth-inputs'></div>\r\n		<div style='text-align: center;'>\r\n		<component-button></component-button>\r\n		</div>\r\n		<footer>\r\n			<button id='change-form-type'>Register</button>\r\n		</footer>\r\n	</form>\r\n</div>\r\n";
 class Auth extends BaseScreen {
   constructor() {
     super({ title: "Auth" });
@@ -1229,7 +1229,7 @@ _changeFormType = new WeakMap();
 const styles$b = {
   "auth-required-message": "_auth-required-message_1abjg_1"
 };
-const template$c = "<div class='auth-required-message'>\n  <span>\n      To view this page,&nbsp; please log in first&nbsp;  -&nbsp;  <a href='./auth'>Go to login</a>\n  </span>\n</div>";
+const template$c = "<div class='auth-required-message'>\r\n  <span>\r\n      To view this page,&nbsp; please log in first&nbsp;  -&nbsp;  <a href='./auth'>Go to login</a>\r\n  </span>\r\n</div>";
 class AuthRequiredMessage extends ChildComponent {
   render() {
     this.element = renderService.htmlToElement(template$c, [], styles$b);
@@ -1244,7 +1244,7 @@ const actions = "_actions_4r799_1";
 const styles$9 = {
   actions
 };
-const template$b = "<div class='actions'>\n	<component-field></component-field>\n	<div id='action-buttons'></div>\n</div>";
+const template$b = "<div class='actions'>\r\n	<component-field></component-field>\r\n	<div id='action-buttons'></div>\r\n</div>";
 class Actions extends ChildComponent {
   constructor() {
     super();
@@ -1412,7 +1412,7 @@ const heading = "_heading_uqm0e_1";
 const styles$7 = {
   heading
 };
-const template$8 = "<div class='heading'>\n\n</div>";
+const template$8 = "<div class='heading'>\r\n\r\n</div>";
 class Heading extends ChildComponent {
   constructor(title = "") {
     super();
@@ -1428,7 +1428,7 @@ const contacts = "_contacts_1y9d8_1";
 const styles$6 = {
   contacts
 };
-const template$7 = "<div class='contacts'>\n	<component-heading></component-heading>\n	<component-transfer-field></component-transfer-field>\n	<div id='contacts-list'></div>\n</div>";
+const template$7 = "<div class='contacts'>\r\n	<component-heading></component-heading>\r\n	<component-transfer-field></component-transfer-field>\r\n	<div id='contacts-list'></div>\r\n</div>";
 class Contacts extends ChildComponent {
   constructor() {
     super();
@@ -1490,7 +1490,7 @@ const styles$4 = {
   draw,
   fadeIn
 };
-const template$5 = "<div class='donut-chart'>\n\n</div>";
+const template$5 = "<div class='donut-chart'>\r\n\r\n</div>";
 class DonutChart extends ChildComponent {
   /**
    * Create a new DonutChart instance.
@@ -1611,7 +1611,7 @@ getSvg_fn = function() {
 const styles$3 = {
   "circle-chart": "_circle-chart_1k8h1_1"
 };
-const template$4 = "<div class='circle-chart'>\n	<component-donut-chart></component-donut-chart>\n</div>";
+const template$4 = "<div class='circle-chart'>\r\n	<component-donut-chart></component-donut-chart>\r\n</div>";
 class CircleChart extends ChildComponent {
   constructor(incomePercent, expensePercent) {
     super();
@@ -1639,7 +1639,7 @@ const styles$2 = {
   green,
   purple
 };
-const template$3 = "<div class='statistic-item'>\n	<span id='statistic-label'></span>\n	<span id='statistic-value'></span>\n</div>";
+const template$3 = "<div class='statistic-item'>\r\n	<span id='statistic-label'></span>\r\n	<span id='statistic-value'></span>\r\n</div>";
 class StatisticsItem extends ChildComponent {
   /**
    * Constructs a StatisticItem instance.
@@ -1665,7 +1665,7 @@ class StatisticsItem extends ChildComponent {
     return this.element;
   }
 }
-const template$2 = "<div class='statistics'>\n	<component-heading></component-heading>\n\n	<div id='circle-chart'></div>\n	<div id='statistics-items'>\n\n	</div>\n</div>";
+const template$2 = "<div class='statistics'>\r\n	<component-heading></component-heading>\r\n\r\n	<div id='circle-chart'></div>\r\n	<div id='statistics-items'>\r\n\r\n	</div>\r\n</div>";
 class Statistics extends ChildComponent {
   constructor() {
     super();
@@ -1792,7 +1792,7 @@ class TransactionItem extends ChildComponent {
     return this.element;
   }
 }
-const template = "<section class='transactions'>\n	<component-heading></component-heading>\n	<div id='transactions-list'></div>\n</section>";
+const template = "<section class='transactions'>\r\n	<component-heading></component-heading>\r\n	<div id='transactions-list'></div>\r\n</section>";
 class Transactions extends ChildComponent {
   constructor() {
     super();
@@ -1920,7 +1920,7 @@ class Router {
     });
   }
   getCurrentPath() {
-    const base = "/bank-js-intensive/";
+    const base = "/Bank-APP/";
     const pathname = window.location.pathname;
     return pathname.replace(base, "./");
   }
