@@ -5,7 +5,7 @@
 Simple application to show recent transaction, statistic, to send money to contacts, simulate top up and withdrawal account, search contacts.
 
 During the course only the frontend was developed. 
-The backend was given initially (can be found here <a href="https://github.com/Inna-B10/Bank-APP-_server_" target="_blank">Bank APP (server)</a>).
+The backend was given initially and can be found here <a href="https://github.com/Inna-B10/Bank-APP-_server_" target="_blank">Bank APP (server)</a>.
 
 ### Vite + Vanilla JavaScript
 
